@@ -1,0 +1,397 @@
+/* Mobile site breakpoint: 768px and below
+Best viewed at approximately 400% browser zoom (mobile simulation)
+My coding was based on several sources.
+The home page I left largely as is. However, the dropdown menu was based on the RoosRoast site. The "Why Use the Resource" section is from playing around with the grid. (https://www.roosroast.com)
+The resume page is based on Havard's Master in Public Policy site. (https://www.hks.harvard.edu/educational-programs/masters-programs/master-public-policy#)
+The networking page is based on HW 3. My intial idea was to have the img and text alternate left right. But ultimately I had everlything lined up vertically as I felt it looked cleaner.
+The career page is based on NYU's Wagner Graduate School site. I created three horitzontal text boxes. (https://wagner.nyu.edu/)
+
+Adjust the logo */
+
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+header img {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav img {
+    width: 120px;
+    height: auto;
+}
+
+/* Networking & Connections */
+
+.Resources-grid img {
+    width: 100%;
+}
+
+.Resources-grid h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+main {
+    text-align: left;
+}
+
+.intro-grid h2 {
+    text-align: center;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: center;
+}
+
+.tech-grid img {
+    width: 100%;
+}
+
+.tech-grid h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+/* Hide skip the main content */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+/* Style the active link */
+
+.active {
+    font-weight: bold;
+    border-bottom: 3px solid black;
+}
+
+/* Style the footer */
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f2f2f2;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Adjust the header navigation links */
+
+nav a:hover,
+nav a:focus {
+    border: 2px dotted purple;
+}
+
+nav a {
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+/* Adjsut Pictures */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.container img {
+    width: 100%;
+}
+
+header h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: center;
+}
+
+.intro-grid img {
+    width: 100%;
+    order: -1;
+}
+
+.intro-grid div {
+    text-align: left;
+}
+
+.Resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    align-items: center;
+}
+
+/* Career Resources */
+
+.career-resources {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.career-resources li {
+    background-color: #f5f7fa;
+    padding: 25px;
+    border-radius: 8px;
+    line-height: 1.5;
+}
+
+.career-resources a {
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.hero-images img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+/*  Home Page */
+
+.why-list {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.why-list li {
+    line-height: 1.6;
+    text-align: left;
+}
+
+.why-list li strong {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.why-list li:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 500px;
+}
+
+.start-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+.start-dropdown:hover .start-menu,
+.start-dropdown:focus-within .start-menu {
+    display: block;
+}
+
+.start-dropdown {
+    text-align: center;
+}
+
+.start-menu li {
+    margin: 10px 0;
+}
+
+.start-dropdown h2 {
+    cursor: pointer;
+}
+
+.start-dropdown h2 {
+    background-color: #00274C;
+    color: white;
+    padding: 12px 18px;
+    display: inline-block;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.start-dropdown h2::after {
+    content: " ▼";
+    font-size: 0.8em;
+}
+
+.popular-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+.popular-dropdown:hover .popular-menu,
+.popular-dropdown:focus-within .popular-menu {
+    display: block;
+}
+
+.popular-dropdown {
+    text-align: center;
+}
+
+.popular-menu li {
+    margin: 10px 0;
+}
+
+.popular-dropdown h2 {
+    background-color: #00274C;
+    color: white;
+    padding: 12px 18px;
+    display: inline-block;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.popular-dropdown h2::after {
+    content: " ▼";
+    font-size: 0.8em;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: 0;
+}
+
+/* Resume Page */
+
+details {
+    margin: 20px 0;
+}
+
+summary {
+    background: #00274C;
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+}
+
+details[open] summary {
+    background: #1B365D;
+}
+
+details ul,
+details ol {
+    background: #f5f5f5;
+    padding: 20px 20px 20px 40px;
+    text-align: left;
+}
+
+details ul,
+details ol,
+details p {
+    text-align: left;
+}
+
+.resume-writing-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.resume-writing-grid img {
+    width: 100%;
+    max-width: 250px;
+    justify-self: center;
+}
+
+.resume-resources-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.resume-resources-grid img {
+    width: 100%;
+    max-width: 300px;
+}
+
+.resume-faq-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.resume-faq-grid img {
+    width: 100%;
+    max-width: 250px;
+    justify-self: center;
+}
